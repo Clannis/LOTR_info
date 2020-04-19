@@ -330,5 +330,3 @@ class LOTRInfo::CLI
     end
 
 end
-
-LOTRInfo::CLI.new.call
