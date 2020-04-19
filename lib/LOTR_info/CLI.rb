@@ -52,6 +52,7 @@ class LOTRInfo::CLI
         puts " - To go back to the main menu, enter 'main menu'."
         puts ""
         user_input = gets.strip
+        puts ""
         if user_input == "1" || user_input == "2" || user_input == "3" || user_input == "main menu" || user_input == "back" || user_input == "exit"
             case user_input
             when "1"
