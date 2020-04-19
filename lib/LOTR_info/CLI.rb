@@ -276,7 +276,9 @@ class LOTRInfo::CLI
         puts ""
         puts " - If you would like a URL to find out more information about a character, enter the number of that character."
         puts " - To go back to the main menu, enter 'main menu'."
+        puts ""
         user_input = gets.strip
+        puts ""
         self.character_selection = user_input.to_i
         if (user_input.to_i > 0 && user_input.to_i <= LOTRInfo::Character.all.length) || user_input == "main menu" || user_input == "back" || user_input == "exit"
             if (user_input.to_i > 0 && user_input.to_i <= LOTRInfo::Character.all.length)
@@ -288,7 +290,9 @@ class LOTRInfo::CLI
                 puts ""
                 puts " - If you want to search another character, enter 'next'."
                 puts " - If you want to go back to the main menu, enter 'main menu'."
+                puts ""
                 user_input = gets.strip
+                puts ""
                 case user_input
                 when "next"
                     list_characters
