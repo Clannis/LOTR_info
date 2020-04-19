@@ -88,7 +88,9 @@ class LOTRInfo::CLI
         puts ""
         puts " - To find out more info about a movie, enter the nunmber of the coresponding movie."
         puts " - To go back to the main menu, enter 'main menu'."
+        puts ""
         user_input = gets.strip
+        puts ""
         self.movie_selection = user_input.to_i
         if (user_input.to_i > 0 && user_input.to_i < 9) || user_input == "main menu" || user_input == "back" || user_input == "exit"
             if (user_input.to_i > 0 && user_input.to_i < 9)
@@ -124,7 +126,9 @@ class LOTRInfo::CLI
         end
         puts " - To go back to select a different movie, enter 'back'."
         puts " - To go back to the main menu, enter 'main menu'."
+        puts ""
         user_input = gets.strip
+        puts ""
         if (user_input == "run time" || user_input == "budget" || user_input == "revenue" || user_input == "nominations" || user_input == "awards" || user_input == "characters" || user_input == "main menu" || user_input == "back" || user_input == "exit") && self.movie_selection > 5
             case user_input
             when "run time"
