@@ -1,0 +1,10 @@
+require 'httparty'
+require 'pry'
+
+require_relative '../lib/LOTR_info/create_module'
+require_relative '../lib/LOTR_info/Book'
+require_relative '../lib/LOTR_info/Movie'
+require_relative '../lib/LOTR_info/Character'
+require_relative '../lib/LOTR_info/Quote'
+require_relative '../lib/LOTR_info/APIManager'
+require_relative '../lib/LOTR_info/CLI'
