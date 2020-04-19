@@ -243,7 +243,9 @@ class LOTRInfo::CLI
                         puts "Invalid Response"
                         puts ""
                         puts "Would you like to look up another character? (y/n)"
+                        puts ""
                         redo_input = gets.strip
+                        puts ""
                     end
                 end
             else
