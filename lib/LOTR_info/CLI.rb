@@ -23,12 +23,12 @@ class LOTRInfo::CLI
         puts "        @@@@@@@@@@@     @@@@@@@@@@@                "
         puts "         @@@@@@@@@@@@@@@@@@@@@@@@@              "
         puts "           @@@@@@@@@@@@@@@@@@@@@               "
-        puts "                @@@@@@@@@@@@                \n\n"
+        puts "               @@@@@@@@@@@@@                \n\n"
         puts " - To list all of the LOTR books, enter 'list books'."
         puts " - To list all of the movies, enter 'list movies'."
         puts " - To list all of the characters in the LOTR universe, enter 'list characters'."
         puts " - To leave the application, enter 'exit' at any time."
-        puts "\n\n"
+        puts "\n"
         user_input = gets.strip
         
         if user_input == "list books" || user_input == "list movies" || user_input == "list characters" || user_input == "exit"
