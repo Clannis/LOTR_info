@@ -220,7 +220,9 @@ class LOTRInfo::CLI
         puts " - If you would like a URL to find out more information about a character, enter the number of that character."
         puts " - To go back to select a different option, enter 'back'."
         puts " - To go back to the main menu, enter 'main menu'."
+        puts ""
         user_input = gets.strip
+        puts ""
         self.character_selection = user_input.to_i
         if (user_input.to_i > 0 && user_input.to_i <= LOTRInfo::Movie.all[self.movie_selection - 1].characters.length) || user_input == "main menu" || user_input == "back" || user_input == "exit"
             if (user_input.to_i > 0 && user_input.to_i <= LOTRInfo::Movie.all[self.movie_selection - 1].characters.length)
