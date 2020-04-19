@@ -50,6 +50,7 @@ class LOTRInfo::CLI
         puts ""
         puts " - To find out how many chapters are in each book, enter the nunmber of the coresponding book."
         puts " - To go back to the main menu, enter 'main menu'."
+        puts ""
         user_input = gets.strip
         if user_input == "1" || user_input == "2" || user_input == "3" || user_input == "main menu" || user_input == "back" || user_input == "exit"
             case user_input
