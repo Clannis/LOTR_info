@@ -56,5 +56,9 @@ class LOTRInfo::Quote
         end
     end
 
+    def self.get_movie_quote(movie_id)
+        LOTRInfo::APIManager.get_movie_quotes(movie_id)
+    end
+
 
 end

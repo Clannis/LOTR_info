@@ -2,4 +2,4 @@
 
 require_relative '../lib/LOTR_info'
 
-LOTR_info::CLI.new.call
+LOTRInfo::CLI.new.call
