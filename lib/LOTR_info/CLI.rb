@@ -306,7 +306,18 @@ class LOTRInfo::CLI
                 sorted_character_list = LOTRInfo::Character.all.sort_by {|character| character.name}
                 puts ""
                 puts "$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$"
-                puts "Find out more about the character #{sorted_character_list[self.character_selection - 1].name} at #{sorted_character_list[self.character_selection - 1].wikiUrl}"
+                puts "#{sorted_character_list[self.character_selection - 1].name}"
+                puts ""
+                puts "Gender: #{sorted_character_list[self.character_selection - 1].gender}"
+                puts "Realm: #{sorted_character_list[self.character_selection - 1].realm}"
+                puts "Race: #{sorted_character_list[self.character_selection - 1].race}"
+                puts "Height: #{sorted_character_list[self.character_selection - 1].height}"
+                puts "Birth Date: #{sorted_character_list[self.character_selection - 1].birth}"
+                puts "Spouse: #{sorted_character_list[self.character_selection - 1].spouse}"
+                puts "Death Date: #{sorted_character_list[self.character_selection - 1].death}"
+                puts "Hair color: #{sorted_character_list[self.character_selection - 1].hair}"
+                puts "#{sorted_character_list[self.character_selection - 1].print_movies}"
+                puts "Find out more about the character at #{sorted_character_list[self.character_selection - 1].name} at #{sorted_character_list[self.character_selection - 1].wikiUrl}"
                 puts "$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$"
                 puts ""
                 puts " - If you want to search another character, enter 'next'."
@@ -342,4 +353,3 @@ class LOTRInfo::CLI
 
 end
 
-LOTRInfo::CLI.new.call
