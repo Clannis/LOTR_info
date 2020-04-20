@@ -43,4 +43,16 @@ class LOTRInfo::Character
         end
     end
 
+    def print_movies
+        result = ""
+        self.movies.each_with_index do |title, index|
+            if index + 1 != self.movies.length
+                result += "#{title}, "
+            else
+                result += "#{title}"
+            end
+        end
+        result
+    end
+
 end
