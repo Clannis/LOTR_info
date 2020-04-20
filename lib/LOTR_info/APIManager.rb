@@ -37,9 +37,4 @@ class LOTRInfo::APIManager
         LOTRInfo::Quote.create_from_api(res["docs"])
     end
 
-    def self.get_movie_quotes(movie_id)
-        res = HTTParty.get(BASE_URL + "/movie/#{movie_id}/quote", {headers: {Authorization: "Bearer k5bdWjVClU0LPC78ayLG"}})
-        LOTRInfo::Quote.create_from_api(res["docs"])
-    end
-
 end

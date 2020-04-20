@@ -71,9 +71,8 @@ class LOTRInfo::Movie
     end
 
     def self.print_list_of_characters_in(movie_index)
-        # LOTRInfo::Quote.get_quotes
+        LOTRInfo::Quote.get_quotes
         movie = self.all[movie_index - 1]
-        LOTRInfo::Quote.get_movie_quote(movie._id)
         puts "The characters that appear in \"#{movie.name}\" are:"
         movie.characters.each_with_index do |character, index|
             puts "#{index + 1}. #{character.name}"
