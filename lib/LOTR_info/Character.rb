@@ -14,7 +14,7 @@ class LOTRInfo::Character
     def initialize(hash)
         @movies = []
         hash.each do |k,v|
-            if k == "wikiUrl" && v == nil
+            if k == "wikiUrl" && (v == nil || v.length < 2)
                 self.send("#{k}=", "*** No URL  provided ***")
             elsif v == "" || v ==" " || v == nil
                 self.send("#{k}=", "*** Data not provided ***")

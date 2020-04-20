@@ -321,7 +321,6 @@ class LOTRInfo::CLI
                 puts "Hair color: #{sorted_character_list[self.character_selection - 1].hair}"
                 puts "#{sorted_character_list[self.character_selection - 1].print_movies}"
                 puts "Find out more about the character at #{sorted_character_list[self.character_selection - 1].name} at #{sorted_character_list[self.character_selection - 1].wikiUrl}"
-                binding.pry
                 puts "$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$"
                 puts ""
                 puts " - If you want to search another character, enter 'next'."
