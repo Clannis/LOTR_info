@@ -248,7 +248,7 @@ class LOTRInfo::CLI
                 puts "Spouse: #{LOTRInfo::Movie.all[self.movie_selection - 1].characters[self.character_selection - 1].spouse}"
                 puts "Death Date: #{LOTRInfo::Movie.all[self.movie_selection - 1].characters[self.character_selection - 1].death}"
                 puts "Hair color: #{LOTRInfo::Movie.all[self.movie_selection - 1].characters[self.character_selection - 1].hair}"
-                puts "Movies: #{LOTRInfo::Movie.all[self.movie_selection - 1].characters[self.character_selection - 1].movies}"
+                puts "#{LOTRInfo::Movie.all[self.movie_selection - 1].characters[self.character_selection - 1].print_movies}"
                 puts "Find out more about the character at #{LOTRInfo::Movie.all[self.movie_selection - 1].characters[self.character_selection - 1].wikiUrl}"
                 puts "$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$"
                 puts ""

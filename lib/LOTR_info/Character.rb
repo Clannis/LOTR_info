@@ -15,7 +15,7 @@ class LOTRInfo::Character
         @movies = []
         hash.each do |k,v|
             if v == ""
-                self.send("#{k}=", nil)
+                self.send("#{k}=", "***Data not provided***")
             else
                 self.send("#{k}=", v)
             end
@@ -44,12 +44,12 @@ class LOTRInfo::Character
     end
 
     def print_movies
-        result = ""
-        self.movies.each_with_index do |title, index|
+        result = "Movies: "
+        self.movies.each_with_index do |movie, index|
             if index + 1 != self.movies.length
-                result += "#{title}, "
+                result += "#{movie.name}, "
             else
-                result += "#{title}"
+                result += "#{movie.name}"
             end
         end
         result
