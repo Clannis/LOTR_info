@@ -254,12 +254,15 @@ class LOTRInfo::CLI
                 puts ""
                 puts "Would you like to look up another character? (y/n)"
                 redo_input = gets.strip
-                while redo_input != "y" || redo_input != "n"
+                while redo_input != "y" || redo_input != "n" || redo_input != "exit"
                     if redo_input == "y"
                         list_movie_character_options
                     elsif redo_input == "n"
                         self.character_selection = nil
                         list_movie_info_options
+                    elsif redo_input == "exit"
+                        puts "Hope you had your fill. Goodbye!"
+                        exit
                     else
                         puts "Invalid Response"
                         puts ""
@@ -318,6 +321,7 @@ class LOTRInfo::CLI
                 puts "Hair color: #{sorted_character_list[self.character_selection - 1].hair}"
                 puts "#{sorted_character_list[self.character_selection - 1].print_movies}"
                 puts "Find out more about the character at #{sorted_character_list[self.character_selection - 1].name} at #{sorted_character_list[self.character_selection - 1].wikiUrl}"
+                binding.pry
                 puts "$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$"
                 puts ""
                 puts " - If you want to search another character, enter 'next'."
