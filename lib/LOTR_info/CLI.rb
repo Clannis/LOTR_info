@@ -5,7 +5,7 @@ class LOTRInfo::CLI
     def call
         LOTRInfo::APIManager.new
         
-        
+        LOTRInfo::APIManager.get_quotes
         LOTRInfo::APIManager.get_characters
         main_menu
     end
