@@ -13,13 +13,6 @@ class LOTRInfo::APIManager
     def self.get_chapters_of(book)
         res = HTTParty.get(BASE_URL + "/book" + "/#{book._id}/chapter",{ headers: {Authorization: "Bearer k5bdWjVClU0LPC78ayLG"}})
         book.add_chapters(res["docs"])
-        # binding.pry
-    end
-
-    def self.get_chapter(book,chapter_id)
-        res = HTTParty.get(BASE_URL + "/book" + "/chapter/#{chapter_id}",{ headers: {Authorization: "Bearer k5bdWjVClU0LPC78ayLG"}})
-        book.add_chapter_details(res["docs"])
-        binding.pry
     end
 
     # MOVIES

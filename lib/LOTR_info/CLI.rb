@@ -70,7 +70,6 @@ class LOTRInfo::CLI
             when "1"
                 puts "*********************************************************"
                 LOTRInfo::Book.print_number_of_chapters_in(1)
-                LOTRInfo::Book.print_chapter_list(1)
                 puts "*********************************************************"
                 list_books
             when "2"

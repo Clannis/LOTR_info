@@ -42,31 +42,26 @@ class LOTRInfo::Movie
         movie = @@all[movie_index - 1]
         run_hours = (movie.runtimeInMinutes / 60)
         run_mins = (movie.runtimeInMinutes % 60)
-        puts ""
         puts "\"#{movie.name}\" is #{run_hours} hours and #{run_mins} minutes long."
     end
 
     def self.print_budget_of(movie_index)
         movie = self.all[movie_index - 1]
-        puts ""
         puts "The budget to make \"#{movie.name}\" was $#{movie.budgetInMillions} millon."
     end
 
     def self.print_revenue_of(movie_index)
         movie = self.all[movie_index - 1]
-        puts ""
         puts "\"#{movie.name}\" made $#{movie.boxOfficeRevenueInMillions} millon at the box office."
     end
 
     def self.print_num_of_nominations_for(movie_index)
         movie = self.all[movie_index - 1]
-        puts ""
         puts "\"#{movie.name}\" was nominated for #{movie.academyAwardNominations} Academy Award(s)!"
     end
 
     def self.print_num_of_awards_for(movie_index)
         movie = self.all[movie_index - 1]
-        puts ""
         puts "\"#{movie.name}\" won #{movie.academyAwardWins} Academy Award(s)!"
     end
 
