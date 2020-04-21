@@ -4,8 +4,8 @@ class LOTRInfo::CLI
 
     def call
         LOTRInfo::APIManager.new
-        LOTRInfo::APIManager.get_books
-        LOTRInfo::APIManager.get_movies
+        
+        
         LOTRInfo::APIManager.get_characters
         main_menu
     end
@@ -34,9 +34,11 @@ class LOTRInfo::CLI
         if user_input == "list books" || user_input == "list movies" || user_input == "list characters" || user_input == "exit"
             case user_input
             when "list books"
+                LOTRInfo::APIManager.get_books
                 list_books
                 main_menu
             when "list movies"
+                LOTRInfo::APIManager.get_movies
                 list_movies
                 main_menu
             when "list characters"

@@ -14,15 +14,15 @@ class LOTRInfo::Character
     def initialize(hash)
         @movies = []
         hash.each do |k,v|
-            if k == "wikiUrl" && (v == nil || v.length < 2)
-                self.send("#{k}=", "*** No URL  provided ***")
-            elsif v == "" || v ==" " || v == nil
+            if v == "" || v ==" " || v == nil
                 self.send("#{k}=", "*** Data not provided ***")
             else
                 self.send("#{k}=", v)
             end
         end
-        
+        if @wikiUrl == nil
+            @wikiUrl = "*** No URL  provided ***"
+        end
     end
 
     def self.find_by_id(id)
@@ -30,7 +30,8 @@ class LOTRInfo::Character
     end
 
     def self.find_by_name(name)
-        @@all.find {|character| character.name == name}
+        a = @@all.find {|character| character.name == name}
+        binding.pry
     end
 
     def add_movie(movie)
@@ -56,7 +57,7 @@ class LOTRInfo::Character
                 end
             end
         else
-            result += "#{self.name} did not appear in any movies"
+            result += "#{self.name} did not appear in any movies."
         end
         result
     end
