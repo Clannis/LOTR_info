@@ -16,7 +16,7 @@ class LOTRInfo::APIManager
         # binding.pry
     end
 
-    def self.get_chapter(chapter_id)
+    def self.get_chapter(book,chapter_id)
         res = HTTParty.get(BASE_URL + "/book" + "/chapter/#{chapter_id}",{ headers: {Authorization: "Bearer k5bdWjVClU0LPC78ayLG"}})
         book.add_chapter_details(res["docs"])
         binding.pry

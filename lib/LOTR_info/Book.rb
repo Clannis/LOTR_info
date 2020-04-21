@@ -60,7 +60,7 @@ class LOTRInfo::Book
         end
     end
 
-    def self.print_chapter(chapter_id)
+    def print_chapter(chapter_id)
         self.chapters.each do |chapter_num, hash|
             hash.each do |k,v|
                 if k[:chapter_id] == chapter_id
@@ -74,7 +74,7 @@ class LOTRInfo::Book
         self.chapters.each do |chapter_num, hash|
             hash.each do |k,v|
                 if k[:chapter_id] == chapter_id
-                    k[:chapter_details] = LOTRInfo::APIManager.get_chapter(chapter_id)
+                    k[:chapter_details] = LOTRInfo::APIManager.get_chapter(self, chapter_id)
                 end
             end
         end
