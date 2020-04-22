@@ -5,8 +5,6 @@ class LOTRInfo::CLI
     def call
         LOTRInfo::APIManager.new
         
-        LOTRInfo::APIManager.get_quotes
-        LOTRInfo::APIManager.get_characters
         main_menu
     end
 
@@ -38,10 +36,13 @@ class LOTRInfo::CLI
                 list_books
                 main_menu
             when "list movies"
-                LOTRInfo::APIManager.get_movies
+                LOTRInfo::Movie.get_movies
                 list_movies
                 main_menu
             when "list characters"
+                LOTRInfo::Movie.get_movies
+                LOTRInfo::Character.get_characters
+                LOTRInfo::Quote.get_quotes
                 list_characters
                 main_menu
             when "exit"
@@ -225,6 +226,8 @@ class LOTRInfo::CLI
     end
 
     def list_movie_character_options
+        LOTRInfo::Character.get_characters
+        LOTRInfo::Quote.get_quotes
         puts "*********************************************************"
         LOTRInfo::Movie.print_list_of_characters_in(self.movie_selection)
         puts "*********************************************************"

@@ -22,7 +22,7 @@ Or install it yourself as:
 
 Type:
 
-    $ gem install LOTR_info
+    $ LOTR_info
 
 and follow the on screen prompts.
 

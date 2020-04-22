@@ -4,12 +4,19 @@ class LOTRInfo::Movie
     include Create::InstanceMethods
 
     @@all = []
+    @@flag = false
 
     def self.all
         @@all
     end
+    
+    def self.flag
+        @@flag
+    end
 
-
+    def self.flag=(state)
+        @@flag = state
+    end
 
     attr_accessor :name, :_id, :runtimeInMinutes, :budgetInMillions, :boxOfficeRevenueInMillions, :academyAwardNominations, :academyAwardWins, :series
     attr_reader :characters
@@ -81,6 +88,11 @@ class LOTRInfo::Movie
         end
     end
 
-    
+    def self.get_movies
+        if self.flag == false
+            LOTRInfo::APIManager.get_movies
+            self.flag = true
+        end
+    end
 
 end

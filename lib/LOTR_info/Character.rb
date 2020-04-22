@@ -4,9 +4,18 @@ class LOTRInfo::Character
     include Create::InstanceMethods
 
     @@all = []
+    @@flag = false
 
     def self.all
         @@all
+    end
+    
+    def self.flag
+        @@flag
+    end
+
+    def self.flag=(state)
+        @@flag = state
     end
 
     attr_accessor :name, :gender, :realm, :race, :_id, :height, :birth, :spouse, :death, :hair, :wikiUrl, :movies
@@ -60,6 +69,13 @@ class LOTRInfo::Character
             result += "#{self.name} did not appear in any movies."
         end
         result
+    end
+
+    def self.get_characters
+        if self.flag == false
+            LOTRInfo::APIManager.get_characters
+            self.flag = true
+        end
     end
 
 end
