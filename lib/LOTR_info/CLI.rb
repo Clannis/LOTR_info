@@ -12,16 +12,16 @@ class LOTRInfo::CLI
 
         puts ""
         puts "Welcome to all your LOTR (Lord Of The Rings) info needs!\n\n"
-        puts "                 @@@@@@@@                     "
-        puts "             @@@@@      @@@@@@                "
-        puts "           @@@               @@@                "
-        puts "        @@@@     @@@@@@@@      @@@@                "
-        puts "        @@@@  @@@        @@@   @@@@                "
-        puts "        @@@@@@              @@@@@@@                "
-        puts "        @@@@@@@@@@@     @@@@@@@@@@@                "
-        puts "         @@@@@@@@@@@@@@@@@@@@@@@@@              "
-        puts "           @@@@@@@@@@@@@@@@@@@@@               "
-        puts "               @@@@@@@@@@@@@                \n\n"
+        puts "                 @@@@@@@@                     ".yellow
+        puts "             @@@@@      @@@@@@                ".yellow
+        puts "           @@@               @@@                ".yellow
+        puts "        @@@@     @@@@@@@@      @@@@                ".yellow
+        puts "        @@@@  @@@        @@@   @@@@                ".yellow
+        puts "        @@@@@@               @@@@@@                ".yellow
+        puts "        @@@@@@@@@        @@@@@@@@@@                ".yellow
+        puts "          @@@@@@@@@@@@@@@@@@@@@@@               ".yellow
+        puts "             @@@@@@@@@@@@@@@@@                ".yellow
+        puts "                 @@@@@@@@                 \n\n".yellow
         puts " - To list all of the LOTR books, enter 'list books'."
         puts " - To list all of the movies, enter 'list movies'."
         puts " - To list all of the characters in the LOTR universe, enter 'list characters'."

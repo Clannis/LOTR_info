@@ -1,5 +1,6 @@
 require 'httparty'
 require 'pry'
+require 'colorize'
 
 require_relative '../lib/LOTR_info/create_module'
 require_relative '../lib/LOTR_info/Book'
