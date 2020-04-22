@@ -18,6 +18,17 @@ class LOTRInfo::Book
             self.send("#{k}=", v)
         end
     end
+    
+    # Live coding method for review
+
+    def self.get_books(input)
+        # return all books in array that start with input
+        @@all.select do |instance|
+            if instance.name[0] == input
+                instance
+            end
+        end
+    end
 
     #each chapter is saved into the instance variable specified 
 
